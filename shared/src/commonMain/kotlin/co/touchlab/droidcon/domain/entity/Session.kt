@@ -1,13 +1,13 @@
 package co.touchlab.droidcon.domain.entity
 
-import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDateTime
 
 class Session(
     override val id: Id,
     val title: String,
     val description: String,
-    val startsAt: Instant,
-    val endsAt: Instant,
+    val startsAt: LocalDateTime,
+    val endsAt: LocalDateTime,
     val isServiceSession: Boolean,
     val room: Room.Id,
     val speakers: List<Profile.Id>,

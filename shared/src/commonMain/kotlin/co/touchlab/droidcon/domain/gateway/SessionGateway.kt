@@ -2,6 +2,7 @@ package co.touchlab.droidcon.domain.gateway
 
 import co.touchlab.droidcon.domain.composite.ScheduleItem
 import co.touchlab.droidcon.domain.entity.Session
+import kotlinx.coroutines.flow.Flow
 
 interface SessionGateway {
 
@@ -11,4 +12,5 @@ interface SessionGateway {
 
     suspend fun getScheduleItem(id: Session.Id): ScheduleItem
 
+    fun observeScheduledItem(id: Session.Id): Flow<ScheduleItem>
 }
