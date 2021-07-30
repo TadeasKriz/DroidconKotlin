@@ -49,6 +49,7 @@ dependencyResolutionManagement {
             val statelyRef = version("stately", "1.1.7")
             val ktorRef = version("ktor", "1.6.0")
             val multiplatformSettingsRef = version("multiplatformSettings", "0.7.7")
+            val androidCoilRef = version("androidCoil", "0.13.0")
 
             alias("kotlin-test-common").to("org.jetbrains.kotlin", "kotlin-test-common").versionRef(kotlinRef)
 
@@ -84,6 +85,7 @@ dependencyResolutionManagement {
 
             alias("multiplatformSettings-core").to("com.russhwolf", "multiplatform-settings").versionRef(multiplatformSettingsRef)
             alias("multiplatformSettings-test").to("com.russhwolf", "multiplatform-settings-test").versionRef(multiplatformSettingsRef)
+            alias("android-coil").to("com.google.accompanist", "accompanist-coil").versionRef(androidCoilRef)
 
             bundle("androidx-compose", listOf(
                 "androidx-compose-ui-core",
