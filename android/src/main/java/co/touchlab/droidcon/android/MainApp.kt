@@ -68,7 +68,7 @@ class MainApp : Application() {
                                     speakers = listOf(
                                         Profile.Id("juli")
                                     ),
-                                    isAttending = true,
+                                    isAttending = false,
                                     feedback = null,
                                 ),
                                 isInConflict = false,
@@ -101,7 +101,7 @@ class MainApp : Application() {
                                     speakers = listOf(
                                         Profile.Id("juli")
                                     ),
-                                    isAttending = true,
+                                    isAttending = false,
                                     feedback = null,
                                 ),
                                 isInConflict = false,
