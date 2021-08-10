@@ -1,24 +1,23 @@
 # Sessionize/Droidcon Mobile Clients
 
-
 [![Build Status](https://dev.azure.com/touchlabApps/DroidconApp/_apis/build/status/touchlab.DroidconKotlin?branchName=master)](https://dev.azure.com/touchlabApps/DroidconApp/_build/latest?definitionId=1&branchName=master)
 
 ## General Info
 
-This project has a pair of native mobile applications backed by the Sessionize data api for use in 
-events hosted by the Sessionize web application. These are specifically for Droidcon events, but can 
+This project has a pair of native mobile applications backed by the Sessionize data api for use in
+events hosted by the Sessionize web application. These are specifically for Droidcon events, but can
 be forked and customized for anything run on Sessionize.
 
 > ## **We're Hiring!**
 >
-> Touchlab is looking for Android-focused mobile engineers, experienced with Kotlin and 
+> Touchlab is looking for Android-focused mobile engineers, experienced with Kotlin and
 > looking to get involved with Kotlin Multiplatorm in the near future. [More info here](https://on.touchlab.co/2KNeYYN).
 
 ## Libraries
 
 Kotlin multiplatform libraries used:
 
-* [SQLDelight](https://github.com/square/sqldelight) - SQL model generator from Square and 
+* [SQLDelight](https://github.com/square/sqldelight) - SQL model generator from Square and
 [AlecStrong](https://github.com/AlecStrong).
 
 * [SQLiter](https://github.com/touchlab/SQLiter) - Lightly opinionated sqlite access driver. Powering
@@ -31,7 +30,7 @@ the sqldelight native driver.
 
 * [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines)
 
-* [Stately](https://github.com/touchlab/Stately/) - Multiplatform threading state library. 
+* [Stately](https://github.com/touchlab/Stately/) - Multiplatform threading state library.
 
 ## Media
 
@@ -41,53 +40,20 @@ the sqldelight native driver.
 
 ## Building
 
-Clone, and at the base, run:
+## IntelliJ or Android Studio
 
-```
-./gradlew build
-```
-
-## Time Zone
-
-The time zone of the conference can be changed for both the Android and iOS applications. The time zone is formatted by the country / city, for example for New York  you would set the variable as "America/New_York".
-
-In Android, you can find the variable in the apps build.gradle. 
-
-```
-buildConfigField "String", "TIME_ZONE", "\"America/Los_Angeles\""
-```
-
-In iOS you can find the variable in the projects info.plist, under Time Zone.
-
-If you want a full list of available Time Zone options, take a look at the TimeZoneAndroid and TimeZoneiOS files in the root.
-
-
-## Intellij or Android Studio
-
-You can use any recent version of Intellij (2018.3+) or Android Studio 3.3+. You should be able to open the
+You can use any recent version of Android Studio 2020.3.1+. You should be able to open the
 project folder directly, or import the project as a gradle project.
 
 ## Xcode
 
-The ios project is in the iosApp folder. CD into it and open the xcworkspace file with Xcode.
-
-```
-cd iosApp
-open iosApp.xcworkspace
-```
+The iOS project is in the "ios/Droidcon" folder. Follow [iOS-specific instructions](./IOSDEV.md) to get it working.
 
 ### Xcode Sync
 
 There is an experimental plugin called Xcode Sync. It imports Kotlin files into the Xcode project.
 You can safely ignore that for now, but if you'd like to have new Kotlin files available in Xcode,
 run the task added by the plugin.
-
-### CocoaPods
-
-CocoaPods is used by the project to import dependencies. We would normally not include the binaries in
-the repo, but a much earlier version of Kotlin native had some odd incompatibility, so we checked them in.
-It's also easier to run the project without needing to set up CocoaPods, so we're just leaving them in for
-now.
 
 ## Customizing
 

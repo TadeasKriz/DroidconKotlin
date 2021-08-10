@@ -1,27 +1,41 @@
 # Minimal iOS Dev Instructions
 
-The absolute bare minimum install instructions, for an iOS dev who maybe hasn't done any Android
+The absolute bare minimum install instructions, for an iOS dev who maybe hasn't done any Android.
 
+1. Download and install [Android SDK](https://developer.android.com/studio#downloads) (Command line tools only)
 
-1 - Install the Android SDK
+2. Unzip the contents of `commandlinetools-mac.zip`.
 
-2 - Go here and download the .zip file for Mac under “Command Line Tools Only”
-On the command line, run the following commands:
-```sdkmanager “platform-tools”
-sdkmanager “platforms;android-28”
-cd ~/Library/Android/sdk
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platorm-tools
-source ~/.bash_profile
+3. In terminal run the following commands:
+```zsh
+cd ~/Downloads/cmdline-tools
+./bin/sdkmanager "platform-tools" "platforms;android-30" "tools" --sdk_root="$HOME/Library/Android/sdk"
 ```
-3 - Download IntelliJ Community: https://www.jetbrains.com/idea/download/#section=mac
 
-4 - `git clone https://github.com/touchlab/DroidconKotlin`
+4. Add these environment properties into your `~/.zshrc`
+```zsh
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+```
 
-5 - Go to the “Terminal” tab on the bottom and run: `./gradlew build` 
+5. Finally run
+```zsh
+source ~/.zshrc
+```
 
-6 - Right click on “DroidconKotlin” in the “Project” tab on the left and select “Reveal in Finder”
+7. Download IntelliJ Community: https://www.jetbrains.com/idea/download/#section=mac
 
-7 - Go to "/iosApp/” and open “iosApp.xcworkspace”
+8. Install [Cocoapods](https://cocoapods.org/)
 
-8 - Run the app!
+6.
+```
+git clone https://github.com/touchlab/DroidconKotlin
+```
+
+7. Navigate to "ios/Droidcon/" and run
+```
+pod install
+open Droidcon.xcworkspace
+```
+
+9. Run the app!

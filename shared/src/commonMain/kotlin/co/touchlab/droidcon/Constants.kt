@@ -3,6 +3,7 @@ package co.touchlab.droidcon
 import kotlinx.datetime.TimeZone
 
 object Constants {
+    // To select a specific time zone, use `TimeZone.of("TIMEZONE_ID")`.
     val conferenceTimeZone = TimeZone.UTC
 
     object Firestore {
